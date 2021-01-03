@@ -2,8 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>GravityItem.qml</file>
+        <file>LeftPlayer.qml</file>
         <file>FootItem.qml</file>
-        <file>LeftFootItem.qml</file>
-        <file>RightFootItem.qml</file>
+        <file>RightPlayer.qml</file>
     </qresource>
 </RCC>
