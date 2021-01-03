@@ -1,7 +1,11 @@
 import QtQuick 2.0
+import QtQuick.Shapes 1.12
 
-GravityItem {
+Shape {
     id: footItem
+
+    property var keyKick
+    property int angle
 
     SequentialAnimation {
         id: kickAnimation

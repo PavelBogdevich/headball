@@ -20,14 +20,14 @@ Item {
         property int duration: 250
         NumberAnimation {
             target: gravityItem
-            properties: "y"
+            property: "y"
             to: upY
             duration: yAnimation.duration * 0.4
             easing.type: Easing.OutExpo
         }
         NumberAnimation {
             target: gravityItem
-            properties: "y"
+            property: "y"
             to: downY
             duration: yAnimation.duration * 0.6
             easing.type: Easing.InExpo
@@ -36,7 +36,7 @@ Item {
     NumberAnimation {
         id: xAnimation
         target: gravityItem
-        properties: "x"
+        property: "x"
         to: targetX
     }
 

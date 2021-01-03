@@ -13,34 +13,20 @@ Window {
         anchors.fill: parent
         spacing: 0
         Item {
+            focus: true
             Layout.fillWidth: true
             Layout.fillHeight: true
-            LeftFootItem {
-                id: leftFootItem
+            Keys.forwardTo: [leftPlayer, rightPlayer]
+            LeftPlayer {
+                id: leftPlayer
                 x: 10
-                y: ground.y - height - 1
+                y: ground.y - height
             }
-            RightFootItem {
-                id: rightFootItem
+            RightPlayer {
+                id: rightPlayer
                 x: root.width - width - 10
-                y: ground.y - height - 1
+                y: ground.y - height
             }
-            Keys.forwardTo: [leftFootItem, rightFootItem]
-            focus: true
-
-            //            GravityItem {
-            //                id: head
-            //                x: 10
-            //                y: ground.y - height
-            //                width: 60
-            //                height: 60
-            //                Rectangle {
-            //                    anchors.fill: parent
-            //                    color: "red"
-            //                    border.width: 1
-            //                    border.color: "black"
-            //                }
-            //            }
         }
         Rectangle {
             id: ground
