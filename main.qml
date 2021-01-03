@@ -15,19 +15,32 @@ Window {
         Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            GravityItem {
-                id: head
+            LeftFootItem {
+                id: leftFootItem
                 x: 10
-                y: ground.y - height
-                width: 60
-                height: 60
-                Rectangle {
-                    anchors.fill: parent
-                    color: "red"
-                    border.width: 1
-                    border.color: "black"
-                }
+                y: ground.y - height - 1
             }
+            RightFootItem {
+                id: rightFootItem
+                x: root.width - width - 10
+                y: ground.y - height - 1
+            }
+            Keys.forwardTo: [leftFootItem, rightFootItem]
+            focus: true
+
+            //            GravityItem {
+            //                id: head
+            //                x: 10
+            //                y: ground.y - height
+            //                width: 60
+            //                height: 60
+            //                Rectangle {
+            //                    anchors.fill: parent
+            //                    color: "red"
+            //                    border.width: 1
+            //                    border.color: "black"
+            //                }
+            //            }
         }
         Rectangle {
             id: ground
